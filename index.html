@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <title>Piedra Papel o Tijera</title>
+  </head>
+  <body>
+    <header class="gameTitle">
+      <h1>Piedra, Papel o Tijera</h1>
+    </header>
+    <div class="scoreContainer">
+      <p class="score"><span id="youScore">0</span>-<span id="computerScore">0</span></p>
+      <p class="scoreLabel">Marcador</p>
+    </div>
+    <div class="gameContainer">
+      <div class="youContainer">
+        <div class="youLabelContainer">
+          <p class="youLabel">Tú</p>
+          <p class="youInstructionsLabel">Selecciona una opción</p>
+        </div>
+        <img src="assets\img\paper.png" alt="Paper" width="75px" onclick="playPaper()" />
+        <img src="assets\img\rock.png" alt="Paper" width="75px" onclick="playRock()" />
+        <img src="assets\img\scissors.png" alt="Paper" width="75px" onclick="playScissors()" />
+      </div>
+      <div class="boardContainer" id="boardContainer">
+        <div class="youHandContainer">
+            <img
+          id="youHand"
+          src="assets\img\scissors.png"
+          alt="Scissors"
+          width="100px"
+        />
+        <p id="youHandLabel">Tijeras</p>
+        </div>
+        <hr id="boardLine" />
+        <div class="computerHandContainer">
+            <img
+          id="computerHand"
+          src="assets\img\scissors.png"
+          alt="Scissors"
+          width="100px"
+        />
+        <p id="computerHandLabel">Tijeras</p>
+        </div>
+      </div>
+      <div class="computerContainer">
+        <div class="computerLabelContainer">
+          <p class="computerLabel">Computadora</p>
+          <p class="computerInstructionsLabel">Selecciona una opcion</p>
+        </div>
+        <img src="assets\img\paper.png" alt="Paper" width="75px" />
+        <img src="assets\img\rock.png" alt="Paper" width="75px" />
+        <img src="assets\img\scissors.png" alt="Paper" width="75px" />
+      </div>
+    </div>
+
+    <script src="assets\js\main.js"></script>
+
+  </body>
+</html>

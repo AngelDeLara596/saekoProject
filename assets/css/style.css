@@ -1,0 +1,165 @@
+/* Body -------------------------------*/
+
+body{
+    margin: 0;
+    height: 100%;
+}
+/* ---------------------------------------- */
+
+/* gameTitle ---------------------------------- */
+.gameTitle h1{
+    font-size: 42px;
+    font-weight: 300;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.gameTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c4c4c4;
+    margin-top: 0;
+    height: 60px;
+    padding: 0;
+}
+/* ------------------------------------------------- */
+
+/* score ---------------------------- */
+.scoreContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.score{
+    margin-bottom: 0;
+    font-size: 70px;
+}
+
+.scoreLabel{
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/* ------------------------------------------ */
+
+/* gameContainer ---------------------------------------*/
+.gameContainer{
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 275px;
+}
+/* --------------------------------------- */
+
+/* you --------------------------------- */
+.youContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.youHandContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.youLabel {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.youInstructionsLabel{
+    font-size: 20px;
+}
+
+.youLabelContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+.youLabelContainer p{
+    margin: 0;
+}
+
+#youHand{
+    visibility: hidden;
+}
+
+#youHandLabel{
+    visibility: hidden;
+}
+
+/* ------------------------------------------------ */
+
+/* board -------------------------------------------------- */
+.boardContainer{
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    flex-grow: 1;
+}
+/* -------------------------------------------------------------- */
+
+/* computer ------------------------------------------------*/
+.computerContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.computerLabel{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.computerLabelContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.computerHandContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.computerLabelContainer p{
+    margin: 0;
+}
+
+#computerHand{
+    visibility: hidden;
+}
+
+#computerHandLabel{
+    visibility: hidden;
+}
+
+.computerInstructionsLabel{
+    visibility: hidden;
+}
+/* -------------------------------------- */
