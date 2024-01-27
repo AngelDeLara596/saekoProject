@@ -126,7 +126,7 @@ function showResult(winner) {
       document.documentElement.style.visibility = 'visible';
 
       document.getElementById("youScore").innerHTML = scoreUser;
-      document.getElementById("youScore").innerHTML = scoreCPU;
+      document.getElementById("computerScore").innerHTML = scoreCPU;
     }, 2000);
     
   } else if (winner == 1) {
