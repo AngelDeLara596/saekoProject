@@ -7,9 +7,10 @@ function playPaper() {
   document.getElementById("youHand").src = "assets/img/paper.png";
   document.getElementById("youHand").style.visibility = "visible";
   document.getElementById("youHandLabel").innerHTML = "Papel";
-  document.getElementById("youHandLabel").style.visibility = "Visible";
+  document.getElementById("youHandLabel").style.visibility = "visible";
   document.getElementById("computerHand").style.visibility = "visible";
-  document.getElementById("computerHandLabel").style.visibility = "Visible";
+  document.getElementById("computerHandLabel").style.visibility = "visible";
+  document.getElementById("youInstructionsLabel").style.visibility = "hidden";
   let computerPlay = Math.floor(Math.random() * 3);
   console.log(computerPlay);
   if (computerPlay == 0) {
@@ -37,6 +38,7 @@ function playRock() {
   document.getElementById("youHandLabel").style.visibility = "Visible";
   document.getElementById("computerHand").style.visibility = "visible";
   document.getElementById("computerHandLabel").style.visibility = "Visible";
+  document.getElementById("youInstructionsLabel").style.visibility = "hidden";
   let computerPlay = Math.floor(Math.random() * 3);
   console.log(computerPlay);
   if (computerPlay == 0) {
@@ -64,6 +66,7 @@ function playScissors() {
   document.getElementById("youHandLabel").style.visibility = "Visible";
   document.getElementById("computerHand").style.visibility = "visible";
   document.getElementById("computerHandLabel").style.visibility = "Visible";
+  document.getElementById("youInstructionsLabel").style.visibility = "hidden";
   let computerPlay = Math.floor(Math.random() * 3);
   console.log(computerPlay);
   if (computerPlay == 0) {
@@ -118,16 +121,15 @@ function showResult(winner) {
     setTimeout(function () {
       var storedHtml = localStorage.getItem("originalHtml");
 
-      document.documentElement.style.visibility = 'hidden';
+      document.documentElement.style.visibility = "hidden";
 
       document.documentElement.innerHTML = storedHtml;
 
-      document.documentElement.style.visibility = 'visible';
+      document.documentElement.style.visibility = "visible";
 
       document.getElementById("youScore").innerHTML = scoreUser;
       document.getElementById("computerScore").innerHTML = scoreCPU;
     }, 2000);
-    
   } else if (winner == 1) {
     // CPU ganadora
     let pWinnerText = document.createTextNode("Perdiste");
@@ -139,17 +141,17 @@ function showResult(winner) {
     scoreCPU += 1;
 
     setTimeout(function () {
-        var storedHtml = localStorage.getItem("originalHtml");
-  
-        document.documentElement.style.visibility = 'hidden';
+      var storedHtml = localStorage.getItem("originalHtml");
 
-        document.documentElement.innerHTML = storedHtml;
+      document.documentElement.style.visibility = "hidden";
 
-        document.documentElement.style.visibility = 'visible';
-  
-        document.getElementById("computerScore").innerHTML = scoreCPU;
-        document.getElementById("youScore").innerHTML = scoreUser;
-      }, 2000);
+      document.documentElement.innerHTML = storedHtml;
+
+      document.documentElement.style.visibility = "visible";
+
+      document.getElementById("computerScore").innerHTML = scoreCPU;
+      document.getElementById("youScore").innerHTML = scoreUser;
+    }, 2000);
   } else if (winner == 2) {
     // Empate
     let pWinnerText = document.createTextNode("Empate");
@@ -159,16 +161,16 @@ function showResult(winner) {
     document.getElementById("boardContainer").appendChild(pWinner);
 
     setTimeout(function () {
-        var storedHtml = localStorage.getItem("originalHtml");
-  
-        document.documentElement.style.visibility = 'hidden';
+      var storedHtml = localStorage.getItem("originalHtml");
 
-        document.documentElement.innerHTML = storedHtml;
+      document.documentElement.style.visibility = "hidden";
 
-        document.documentElement.style.visibility = 'visible';
-  
-        document.getElementById("computerScore").innerHTML = scoreCPU;
-        document.getElementById("youScore").innerHTML = scoreUser;
-      }, 2000);
+      document.documentElement.innerHTML = storedHtml;
+
+      document.documentElement.style.visibility = "visible";
+
+      document.getElementById("computerScore").innerHTML = scoreCPU;
+      document.getElementById("youScore").innerHTML = scoreUser;
+    }, 2000);
   }
 }
