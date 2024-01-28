@@ -11,7 +11,9 @@
       <h1>Piedra, Papel o Tijera</h1>
     </header>
     <div class="scoreContainer">
-      <p class="score"><span id="youScore">0</span>-<span id="computerScore">0</span></p>
+      <p class="score">
+        <span id="youScore">0</span>-<span id="computerScore">0</span>
+      </p>
       <p class="scoreLabel">Marcador</p>
     </div>
     <div class="gameContainer">
@@ -20,30 +22,50 @@
           <p class="youLabel">Tú</p>
           <p class="youInstructionsLabel">Selecciona una opción</p>
         </div>
-        <img src="assets\img\paper.png" alt="Paper" width="75px" onclick="playPaper()" />
-        <img src="assets\img\rock.png" alt="Paper" width="75px" onclick="playRock()" />
-        <img src="assets\img\scissors.png" alt="Paper" width="75px" onclick="playScissors()" />
+        <img
+          src="assets\img\paper.png"
+          alt="Paper"
+          width="75px"
+          onclick="playPaper()"
+        />
+        <img
+          src="assets\img\rock.png"
+          alt="Paper"
+          width="75px"
+          onclick="playRock()"
+        />
+        <img
+          src="assets\img\scissors.png"
+          alt="Paper"
+          width="75px"
+          onclick="playScissors()"
+        />
       </div>
       <div class="boardContainer" id="boardContainer">
-        <div class="youHandContainer">
-            <img
-          id="youHand"
-          src="assets\img\scissors.png"
-          alt="Scissors"
-          width="100px"
-        />
-        <p id="youHandLabel">Tijeras</p>
-        </div>
-        <hr id="boardLine" />
+        
         <div class="computerHandContainer">
-            <img
-          id="computerHand"
-          src="assets\img\scissors.png"
-          alt="Scissors"
-          width="100px"
-        />
-        <p id="computerHandLabel">Tijeras</p>
+          <img
+            id="computerHand"
+            src="assets\img\scissors.png"
+            alt="Scissors"
+            width="100px"
+          />
+          <p id="computerHandLabel">Tijeras</p>
         </div>
+
+        <hr id="boardLine" />
+        
+        <div class="youHandContainer">
+          <img
+            id="youHand"
+            src="assets\img\scissors.png"
+            alt="Scissors"
+            width="100px"
+          />
+          <p id="youHandLabel">Tijeras</p>
+        </div>
+
+        
       </div>
       <div class="computerContainer">
         <div class="computerLabelContainer">
@@ -57,6 +79,5 @@
     </div>
 
     <script src="assets\js\main.js"></script>
-
   </body>
 </html>

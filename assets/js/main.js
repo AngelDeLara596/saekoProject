@@ -2,9 +2,8 @@ function playPaper() {
   var originalHtml = document.documentElement.innerHTML;
   //var originalCss = document.head.querySelector('style').innerHTML;
 
-  // Almacena el HTML y CSS original en el almacenamiento local
   localStorage.setItem("originalHtml", originalHtml);
-  //localStorage.setItem('originalCss', originalCss);
+
   document.getElementById("youHand").src = "assets/img/paper.png";
   document.getElementById("youHand").style.visibility = "visible";
   document.getElementById("youHandLabel").innerHTML = "Papel";
@@ -17,17 +16,17 @@ function playPaper() {
     //Computadora juega Paper
     document.getElementById("computerHand").src = "assets/img/paper.png";
     document.getElementById("computerHandLabel").innerHTML = "Papel";
-    setTimeout(showResult, 3000, 2); // 2 es empate
+    setTimeout(showResult, 2000, 2); // 2 es empate
   } else if (computerPlay == 1) {
     //CPU juega Rock
     document.getElementById("computerHand").src = "assets/img/rock.png";
     document.getElementById("computerHandLabel").innerHTML = "Piedra";
-    setTimeout(showResult, 3000, 0); // 0 es user win
+    setTimeout(showResult, 2000, 0); // 0 es user win
   } else if (computerPlay == 2) {
     // CPU juega Scissors
     document.getElementById("computerHand").src = "assets/img/scissors.png";
     document.getElementById("computerHandLabel").innerHTML = "Tijeras";
-    setTimeout(showResult, 3000, 1); // 1 es CPU win
+    setTimeout(showResult, 2000, 1); // 1 es CPU win
   }
 }
 
@@ -44,17 +43,17 @@ function playRock() {
     //Computadora juega Paper
     document.getElementById("computerHand").src = "assets/img/paper.png";
     document.getElementById("computerHandLabel").innerHTML = "Papel";
-    setTimeout(showResult, 3000, 1); // 1 (lose)
+    setTimeout(showResult, 2000, 1); // 1 (lose)
   } else if (computerPlay == 1) {
     //CPU juega Rock
     document.getElementById("computerHand").src = "assets/img/rock.png";
     document.getElementById("computerHandLabel").innerHTML = "Piedra";
-    setTimeout(showResult, 3000, 2); // 2 (empate)
+    setTimeout(showResult, 2000, 2); // 2 (empate)
   } else if (computerPlay == 2) {
     // CPU juega Scissors
     document.getElementById("computerHand").src = "assets/img/scissors.png";
     document.getElementById("computerHandLabel").innerHTML = "Tijeras";
-    setTimeout(showResult, 3000, 0); // 0 (win)
+    setTimeout(showResult, 2000, 0); // 0 (win)
   }
 }
 
@@ -71,17 +70,17 @@ function playScissors() {
     //Computadora juega Paper
     document.getElementById("computerHand").src = "assets/img/paper.png";
     document.getElementById("computerHandLabel").innerHTML = "Papel";
-    setTimeout(showResult, 3000, 0); // Win
+    setTimeout(showResult, 2000, 0); // Win
   } else if (computerPlay == 1) {
     //CPU juega Rock
     document.getElementById("computerHand").src = "assets/img/rock.png";
     document.getElementById("computerHandLabel").innerHTML = "Piedra";
-    setTimeout(showResult, 3000, 1); // Lose
+    setTimeout(showResult, 2000, 1); // Lose
   } else if (computerPlay == 2) {
     // CPU juega Scissors
     document.getElementById("computerHand").src = "assets/img/scissors.png";
     document.getElementById("computerHandLabel").innerHTML = "Tijeras";
-    setTimeout(showResult, 3000, 2); // Draw
+    setTimeout(showResult, 2000, 2); // Draw
   }
 }
 

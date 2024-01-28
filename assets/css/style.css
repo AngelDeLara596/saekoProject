@@ -1,165 +1,362 @@
-/* Body -------------------------------*/
+/*======================================================*/
+@media (max-width: 649px) {
+    body{
+        padding: 0;
+        margin: 0;
+    }
+/*gameTitle ------------------------------------------------*/
+    .gameTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c4c4c4;
+        margin-top: 0;
+        height: 10vw;
+        padding: 0;
+    }
 
-body{
-    margin: 0;
-    height: 100%;
-}
-/* ---------------------------------------- */
-
-/* gameTitle ---------------------------------- */
-.gameTitle h1{
-    font-size: 42px;
-    font-weight: 300;
-    font-family: 'Montserrat',sans-serif;
-}
-
-.gameTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #c4c4c4;
-    margin-top: 0;
-    height: 60px;
-    padding: 0;
-}
-/* ------------------------------------------------- */
+    .gameTitle h1{
+        font-size: 4.855vw;
+        font-weight: 300;
+        font-family: 'Montserrat',sans-serif;
+    }
+/* ------------------------------------------------------ */
 
 /* score ---------------------------- */
-.scoreContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
+    .scoreContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 10vw;
+        padding: 0;
+    }
 
-.score{
-    margin-bottom: 0;
-    font-size: 70px;
-}
+    .score{
+        margin-bottom: 0;
+        font-size: 20vw;
+        margin-top: 0;
+    }
 
-.scoreLabel{
-    margin-top: 0;
-    font-size: 20px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+    .scoreLabel{
+        margin-top: 0;
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
 /* ------------------------------------------ */
 
 /* gameContainer ---------------------------------------*/
-.gameContainer{
-    display: flex;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    top: 275px;
-}
-/* --------------------------------------- */
+    .gameContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+/* ----------------------------------------------------------- */
 
 /* you --------------------------------- */
-.youContainer{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 0;
-}
+    .youContainer{
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
-.youHandContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .youContainer img{
+        cursor: pointer;
+        width: 7.9vw;
+    }
 
-}
+    .youHandContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.youLabel {
-    font-size: 40px;
-    font-weight: 400;
-    font-family: sans-serif;
-}
+    .youLabel {
+        text-align: center;
+        font-size: clamp(16px,7.5vw,100px);
+    }
 
-.youInstructionsLabel{
-    font-size: 20px;
-}
+    .youInstructionsLabel{
+        font-size: clamp(16px,1vw,36px);
+        text-align: center;
+    }
 
-.youLabelContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-family: sans-serif;
-}
+    .youLabelContainer{
+        grid-row: 2;
+        grid-column: 2;
+    }
 
-.youLabelContainer p{
-    margin: 0;
-}
+    .youLabelContainer p{
+        margin: 0;
+    }
 
-#youHand{
-    visibility: hidden;
-}
+    #youHand{
+        visibility: hidden;
+        width: 12.5vw;
+    }
 
-#youHandLabel{
-    visibility: hidden;
-}
+    #youHandLabel{
+        visibility: hidden;
+        font-size: clamp(16px,1vw,36px);      
+    }
 
 /* ------------------------------------------------ */
 
 /* board -------------------------------------------------- */
-.boardContainer{
-    padding-top: 0;
-    margin-top: 0;
-    display: flex;
-    flex-grow: 1;
+    .boardContainer{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #boardLine{
+        width: 95vw;
+    }
+/* -------------------------------------------------------------- */
+
+/* computer --------------------------------- */
+    .computerContainer{
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .computerContainer :nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .computerContainer :nth-child(3){
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .computerContainer :nth-child(4){
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .computerContainer img{
+        cursor: pointer;
+        width: 7.9vw;
+    }
+
+    .computerHandContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .computerLabel {
+        text-align: center;
+        font-size: clamp(16px,7.5vw,100px);
+    }
+
+    .computerInstructionsLabel{
+        font-size: clamp(16px,1vw,36px);
+        text-align: center;
+        visibility: hidden;
+    }
+
+    .computerLabelContainer{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .computerLabelContainer p{
+        margin: 0;
+    }
+
+    #computerHand{
+        visibility: hidden;
+        width: 12.5vw;
+    }
+
+    #computerHandLabel{
+        visibility: hidden;
+        font-size: clamp(16px,1vw,36px);      
+    }
+
+/* ------------------------------------------------ */
+
 }
+/*===================================================== */
+
+
+@media (min-width: 650px) {
+/* Body -------------------------------*/
+
+    body{
+        margin: 0;
+        height: 100%;
+    }
+/* ---------------------------------------- */
+
+/* gameTitle ---------------------------------- */
+    .gameTitle h1{
+        font-size: 42px;
+        font-weight: 300;
+        font-family: 'Montserrat',sans-serif;
+    }
+
+    .gameTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c4c4c4;
+        margin-top: 0;
+        height: 60px;
+        padding: 0;
+    }
+/* ------------------------------------------------- */
+
+/* score ---------------------------- */
+    .scoreContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .score{
+        margin-bottom: 0;
+        font-size: 70px;
+    }
+
+    .scoreLabel{
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+/* ------------------------------------------ */
+
+/* gameContainer ---------------------------------------*/
+    .gameContainer{
+        display: flex;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        top: 275px;
+    }
+/* --------------------------------------- */
+
+/* you --------------------------------- */
+    .youContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-left: 0;
+    }
+
+    .youContainer img{
+        cursor: pointer;
+    }
+
+    .youHandContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .youLabel {
+        font-size: 40px;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+
+    .youInstructionsLabel{
+        font-size: 20px;
+    }
+
+    .youLabelContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family: sans-serif;
+    }
+
+    .youLabelContainer p{
+        margin: 0;
+    }
+
+    #youHand{
+        visibility: hidden;
+    }
+
+    #youHandLabel{
+        visibility: hidden;
+    }
+
+/* ------------------------------------------------ */
+
+/* board -------------------------------------------------- */
+    .boardContainer{
+        padding-top: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-grow: 1;
+    }
 /* -------------------------------------------------------------- */
 
 /* computer ------------------------------------------------*/
-.computerContainer{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 0;
-}
+    .computerContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-left: 0;
+    }
 
-.computerLabel{
-    font-size: 40px;
-    font-weight: 400;
-    font-family: sans-serif;
-}
+    .computerLabel{
+        font-size: 40px;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
 
-.computerLabelContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
+    .computerLabelContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-.computerHandContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .computerHandContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.computerLabelContainer p{
-    margin: 0;
-}
+    .computerLabelContainer p{
+        margin: 0;
+    }
 
-#computerHand{
-    visibility: hidden;
-}
+    #computerHand{
+        visibility: hidden;
+    }
 
-#computerHandLabel{
-    visibility: hidden;
-}
+    #computerHandLabel{
+        visibility: hidden;
+    }
 
-.computerInstructionsLabel{
-    visibility: hidden;
-}
+    .computerInstructionsLabel{
+        visibility: hidden;
+    }
 /* -------------------------------------- */
+}
